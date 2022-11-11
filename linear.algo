@@ -1,0 +1,42 @@
+ALGORITHM Sumdistinct(a1, a2 : ARRAY_OF INTEGER[50])
+
+VAR
+
+sum: INTEGER := 0
+i:INTEGER :=0
+j:INTEGER :=0
+e:INTEGER :=0
+f:INTEGER :=0
+isInBoth:BOOLEAN :=false
+
+BEGIN
+
+//EFFACER LES DOUBLONS
+
+while (i<a1.length) do
+isInBoth:=false
+while (j<a2.length) do
+if (a1[i]==a2[j]) then
+a2.splice(a2.find(a2[j]))
+IsInBoth:=True
+else
+end if
+j=j+1
+End while
+if (isInBoth==True)
+a1.splice(a1.find(a1[j]))
+End if
+i=i+1
+end while
+
+//SOMME
+while (e<a1.length)
+sum=sum+a1[e]
+end while
+while (f<a2.length)
+sum=sum+a2[f]
+end while
+
+write sum
+
+END
